@@ -18,4 +18,5 @@ describe Bookmark do
       expect(bookmarks).to include('http://www.google.co.uk')
     end
   end
+
 end
