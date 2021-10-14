@@ -21,9 +21,10 @@ describe Bookmark do
 
   describe '.create' do
     it 'creates a new bookmark' do
-      Bookmark.create(url: 'http://www.rubyguides.com')
+      bookmark = Bookmark.create(url: 'http://www.rubyguides.com', title: 'Ruby Guides').first
 
-      expect(Bookmark.all).to include 'http://www.rubyguides.com'
+      expect(bookmark['url']).to eq 'http://www.rubyguides.com'
+      expect(bookmark['title']).to eq 'Ruby Guides'
     end
   end
 
